@@ -1,0 +1,67 @@
+/* Style for the text inputs */
+input[type="text"] {
+    width: 233px; /* Set width to fill the container */
+    height: 32px; /* Set height */
+    padding: 10px; /* Add padding for better spacing */
+    margin-bottom: 10px; /* Add margin bottom for spacing between inputs */
+    border: 1px solid transparent; /* Make border transparent */
+    border-radius: 5px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    background-color: transparent; /* Make background color transparent */
+    position: absolute; /* Set position to absolute */
+}
+
+/* Positioning for each text box */
+#spec { top: 280px; left: 90px; }
+#ram { top: 189px; left: 90px; }
+#ramtype { top: 370px; left: 90px; }
+#rom { top: 450px; left: 90px; }
+
+#displaysize { top: 320px; left: 393px; }
+#width { top: 219px; left: 393px; }
+#height { top: 427px; left: 393px; }
+
+#model { top: 190px; left: 698px; }
+#core { top: 280px; left: 698px; }
+#thread { top: 371px; left: 698px; }
+#gputype { top: 450px; left: 698px; }
+
+/* Add similar rules for other text boxes */
+
+/* Style for the form container */
+body {
+    background-image: url("D:\Downloads\ML\ML\static\css\oo.png"); /* Specify the URL of your image */
+    background-size: contain;
+    background-position: center; /* Center the background image */
+    font-family: Arial, sans-serif; /* Use a fallback font */
+    display: flex;
+    justify-content: center; /* Center the form horizontally */
+    align-items: center; /* Center the form vertically */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default body margin */
+}
+
+/* Style for the button */
+button {
+    width: 180px;
+    height: 50px;
+    background-color: transparent;
+    color: transparent;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 617px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Style for the prediction text */
+#prediction-result {
+    position: absolute;
+    top:550px;
+    left:520px ;
+    transform: translateX(-50%);
+    font-size: 18px; /* Adjust font size as needed */
+}
+

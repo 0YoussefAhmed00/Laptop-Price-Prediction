@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f0f0f0; margin: 0; padding: 0;">
+
+<div class="login" style="width: 600px; margin: 50px auto; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); background: linear-gradient(135deg, #8e2de2, #4a00e0); color: #fff;">
+
+    <h1 style="text-align: center; color: #333;">Predict Laptop Price</h1>
+
+    <form action="{{ url_for('predict')}}" method="post" style="margin-top: 20px;">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+            <input type="text" name="spec" placeholder="Spec" required="required" style="flex: 1; padding: 10px; margin-right: 10px; border: 1px solid #ccc; border-radius: 5px;">
+            <input type="text" name="ram" placeholder="RAM" required="required" style="flex: 1; padding: 10px; margin-left: 10px; border: 1px solid #ccc; border-radius: 5px;">
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+            <input type="text" name="ramtype" placeholder="RAM Type" required="required" style="flex: 1; padding: 10px; margin-right: 10px; border: 1px solid #ccc; border-radius: 5px;">
+            <input type="text" name="rom" placeholder="ROM" required="required" style="flex: 1; padding: 10px; margin-left: 10px; border: 1px solid #ccc; border-radius: 5px;">
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+            <input type="text" name="displaysize" placeholder="Display Size" required="required" style="flex: 1; padding: 10px; margin-right: 10px; border: 1px solid #ccc; border-radius: 5px;">
+            <input type="text" name="width" placeholder="Width" required="required" style="flex: 1; padding: 10px; margin-left: 10px; border: 1px solid #ccc; border-radius: 5px;">
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+            <input type="text" name="height" placeholder="Height" required="required" style="flex: 1; padding: 10px; margin-right: 10px; border: 1px solid #ccc; border-radius: 5px;">
+            <input type="text" name="model" placeholder="Model" required="required" style="flex: 1; padding: 10px; margin-left: 10px; border: 1px solid #ccc; border-radius: 5px;">
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+            <input type="text" name="core" placeholder="Core" required="required" style="flex: 1; padding: 10px; margin-right: 10px; border: 1px solid #ccc; border-radius: 5px;">
+            <input type="text" name="thread" placeholder="Thread" required="required" style="flex: 1; padding: 10px; margin-left: 10px; border: 1px solid #ccc; border-radius: 5px;">
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+            <input type="text" name="gputype" placeholder="GPU Type" required="required" style="flex: 1; padding: 10px; margin-right: 10px; border: 1px solid #ccc; border-radius: 5px;">
+
+        </div>
+
+<button type="submit" class="btn" style="width: 100%; background: linear-gradient(135deg, #8e2de2, #6200ea); color: #fff; padding: 10px; border: none; border-radius: 5px; cursor: pointer;"
+          onmouseover="this.style.background='linear-gradient(135deg, #8e2de2, #3f00b5)';"
+          onmouseout="this.style.background='linear-gradient(135deg, #8e2de2, #6200ea)';"
+        >Predict</button>    </form>
+
+    <div style="text-align: center; margin-top: 20px; color: #fff;">
+        {{ prediction_text }}
+    </div>
+
+</div>
+
+</body>
+</html>
